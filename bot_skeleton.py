@@ -1,7 +1,7 @@
 import telegram
 from telegram.ext import Updater, CommandHandler
 
-class TelegramBot:
+class TelegramBot:  
     def __init__(self, name, token):
         self.core = telegram.Bot(token)
         self.updater = Updater(token)
@@ -20,7 +20,7 @@ class TelegramBot:
 class Ethicsbot(TelegramBot):
     def __init__(self):
         self.token = '1452014249:AAF8xlpe6r3sAq0c3ZJ--HH6I5qT5ZBftQs'
-        TelegramBot.__init__(self, 'cs489', self.token)
+        TelegramBot.__init__(self, ' ', self.token)
         self.updater.stop()
 
     def add_handler(self, cmd, func):
@@ -28,5 +28,6 @@ class Ethicsbot(TelegramBot):
 
     def start(self):
         self.sendMessage('Start of test.')
+        self.sendMessage('go to https://api.telegram.org/bot1452014249:AAF8xlpe6r3sAq0c3ZJ--HH6I5qT5ZBftQs/getUpdates for log')
         self.updater.start_polling()
         self.updater.idle()
