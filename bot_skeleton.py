@@ -1,15 +1,16 @@
 import telegram
+import telepot
 from telegram.ext import Updater, CommandHandler
 
 class TelegramBot:  
     def __init__(self, name, token):
         self.core = telegram.Bot(token)
         self.updater = Updater(token)
-        self.id = 1476179514
+        self.id = 1334060345
         self.name = name
 
-    def sendMessage(self, text):
-        self.core.sendMessage(chat_id = self.id, text=text)
+    def sendMessage(self, text, user_id):
+        self.core.sendMessage(chat_id = user_id, text=text)
 
     def stop(self):
         self.updater.start_polling()
@@ -26,8 +27,9 @@ class Ethicsbot(TelegramBot):
     def add_handler(self, cmd, func):
         self.updater.dispatcher.add_handler(CommandHandler(cmd, func))
 
-    def start(self):
-        self.sendMessage('Start of test.')
-        self.sendMessage('go to https://api.telegram.org/bot1452014249:AAF8xlpe6r3sAq0c3ZJ--HH6I5qT5ZBftQs/getUpdates for log')
+    def start(self, user_id):
+        self.sendMessage('Start of test.', user_id)  
+        msg = "User's id: " + str(self.id)
+        self.sendMessage(msg, user_id)
         self.updater.start_polling()
         self.updater.idle()
