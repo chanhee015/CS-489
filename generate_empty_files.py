@@ -2,9 +2,9 @@ import sys
 import csv
 
 def gen_files():
-    age = ['20s', '30s', '40s', 'Others']
-    gender = ['Male', 'Female', 'Others']
-    job = ['Student', 'Graduate student', 'Employee', 'Self-owner', 'Specialized', 'Others']
+    age = ['20대', '30대', '40대', '기타']
+    gender = ['남성', '여성', '기타']
+    job = ['학생', '대학원생', '회사원', '자영업자', '전문직', '기타']
 
     info_file = open('info.csv', 'a')
     info_file.close()
