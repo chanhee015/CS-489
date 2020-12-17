@@ -4,3 +4,6 @@
 2. Run main.py - while it is running, you are able to use cs489 bot on Telegram.
 - But since we are already running it on server - you can just try it on Telegram!
 - Running with same token (given PW for each bots) will make our bot stop.
+
+## How to use this bot?
+- Simply search 'cs489' on Telegram, and send /start to start test.
