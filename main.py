@@ -10,14 +10,6 @@ from telegram.ext import CallbackContext, CallbackQueryHandler, CommandHandler, 
 import dilemma
 import generate_empty_files
 
-# 1. 사용자가 /teststart로 test시작. (구현완료)
-# 2. 이 id를 확인 (구현완료)
-# 3. 해당 id가 'info.csv'에 있는지 확인. 없으면 3-1로, 있으면 3-2로. (csv 파일 형식: ['id', 'age', 'gender', 'job']) (구현완료)
-# 3-1. 없으면 age, gender, job을 물어본 후 저장. 3-2로 감. (구현완료)
-# 3-2. age, gender, job을 확인 후 해당하는 csv 파일로 감. (구현완료)
-# 4. 질문하기 및 그 질문에 대한 평균을 보여주기 (성범) -- 답변이 없었던 질문인데 이게 조합되어 만든 질문일 경우에는 그 평균도 함께 보여줄 수 있어야 함.
-# 5. 해당 질문과 그에 대한 답변을 csv에 저장. (ex. '20_male_student.csv'에 [딜레마, 점수] 형식으로 저장 -- 저장 방식은 딜레마 어떻게 조합 및 제공하냐에 따라 달라짐)
-
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 AGE, GENDER, JOB, ASKQ1, ASKQ2, ASKQ3, PREDQ1, PREDQ2, PREDQ3, ENDTEST = range(10)
