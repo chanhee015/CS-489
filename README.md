@@ -7,3 +7,4 @@
 
 ## How to use this bot?
 - Simply search 'cs489' on Telegram, and send /start to start test.
+- But we have sufficient datas only for 20s male student for now, so if you just want to try how it works, please set your information as 20s male student.
